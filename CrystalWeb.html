@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing Website</title>
+    <style>
+        /* Basic styles for tab navigation */
+        .tab {
+            cursor: pointer;
+            padding: 10px;
+            display: inline-block;
+            background-color: #fdfdfd;
+            margin-right: 10px;
+        }
+
+        .tab:hover {
+            background-color: #ffffff;
+        }
+
+        /* Hide content sections by default */
+        .content-section {
+            display: none;
+        }
+
+        /* Show the active content section */
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tab navigation -->
+    <div>
+        <span class="tab" onclick="showSection('bio')">Bio</span>
+        <span class="tab" onclick="showSection('presentation')">Presentation</span>
+    </div>
+
+    <!-- Content sections -->
+    <div id="bio" class="content-section">
+        <h2>Bio</h2>
+        <p>This is the Bio section. Add your content about the Bio here.</p>
+    </div>
+
+    <div id="presentation" class="content-section">
+        <h2>Presentation</h2>
+        <iframe src="https://docs.google.com/presentation/d/14z-RPbl01_v6P6btLu4b0trwBw0gFom_8CQEZVDbufQ/edit#slide=id.g304b02632a8_0_40" width="1920" height="1080"></iframe>
+    </div>
+
+    <!-- Simple JavaScript to show/hide sections -->
+    <script>
+        // Function to show the selected section and hide others
+        function showSection(sectionId) {
+            // Hide all sections
+            document.getElementById('bio').classList.remove('active');
+            document.getElementById('presentation').classList.remove('active');
+            
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Show the Bio section by default when the page loads
+        showSection('bio');
+    </script>
+
+</body>
+</html>
