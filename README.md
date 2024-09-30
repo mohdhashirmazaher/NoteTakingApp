@@ -1,7 +1,5 @@
 # NoteTakingApp
 
-<!DOCTYPE html>
-
 <html>
 <head>
     <title>Testing Website</title>
